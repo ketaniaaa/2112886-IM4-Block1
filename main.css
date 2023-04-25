@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'momcakethin';
+    src: url('https: //github.com/ketaniaaa/2112886-IM4-Block1/blob/main/fonts/momcakethin-9y6az-webfont.woff2') format('woff2'),
+        url('https: //github.com/ketaniaaa/2112886-IM4-Block1/blob/main/fonts/momcakethin-9y6az-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 h1{
     color: red;
 }
