@@ -47,6 +47,37 @@ menu.appendChild(navBar);
  }
  navBar.appendChild(navList);
 
+const footer = document.createElement('footer');
+footer.id ="footsy";
+menu.appendChild(footer);
+
+const authorCredit = document.createElement('p');
+authorCredit.id = 'endCredit';
+authorCredit.innerText = "Ketania Govender 2023"
+footer.appendChild(authorCredit);
+
+const exLinks = document.createElement('ul');
+exLinks.id = 'ulExlink';
+const exItems = [
+   {title: 'Github', link: 'https://github.com/ketaniaaa/2112886-IM4-Block1', target: 'blank'},
+   {title: 'Figma', link: 'https://github.com/ketaniaaa/2112886-IM4-Block1', target: 'blank'},
+   {title: 'Resources', link: 'https://github.com/ketaniaaa/2112886-IM4-Block1', target: 'blank'},
+   {title: 'LinkedIn', link: 'https://github.com/ketaniaaa/2112886-IM4-Block1', target: 'blank'}
+];
+for (let item of exItems){
+   const exLi = document.createElement('li');
+   exLi.id = 'liEx';
+
+   const exA = document.createElement('a');
+   exA.id ='aEx';
+   exA.innerText = item.title;
+   exA.href = item.link;
+   exA.EventTarget = item.target;
+   exLi.appendChild(exA);
+   exLinks.appendChild(exLi);
+}
+footer.appendChild(exLinks);
+
  //the header is the main parent and now the nav bar has a list as a child and each list element as a link as a child
 
  const headHead = document.getElementById("mainPage");

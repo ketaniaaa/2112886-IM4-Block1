@@ -6,6 +6,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="canonical" href="https://the-myth.netlify.app/" /> <!--Show google that this is the main page of my site-->
+    <meta name="description" content="Explore Camus' absurdist interpretation of the Myth of Sisyphus by immersing yourself in the story">
+    <meta name="author" content="Ketania Govender" />
+    <meta property="og:site_name" content="The Myth" />
+    <meta property="og:title" content="The Myth Home" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://the-myth.netlify.app/" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="The Myth Logo" />
+    <meta property="og:description" content="The Myth of Sisyphus Internet Artwork" />
+    <meta name="keywords"
+        content="Sisyphus, Greek mythology, The myth of sisyphus, Albert Camus, Absurdism, Tensorflow, FaceAPI, blink detection, Internet Artwork, Interactive Artwork, Netart, 
+        digital art, storytelling website" />
     <!--Local Files-->
     <script src="js/main.js" defer></script> 
     <link rel="stylesheet" href="main.css">
@@ -15,9 +29,16 @@
     <title>Home</title>
 </head>
 <body>
-    <main id="mainPage" class="topPage">
-    <h1>Hello home</h1>
-    <h2 onclick="sideBar()">open menu </h2>
+    <main id="mainPage" class="h-feed homePage">
+        <header>
+           <span onclick="sideBar()" class="btn btn-primary badge" id="menuButton"><i class="fa-solid fa-bars"></i></span>
+           <a href="index.html" id="mainTitle" class="u-url p-name">The Myth</a>
+           <span class="btn btn-primary badge" id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </header>
+   <section class="h-card" id="homeCard">
+
+   </section>
+    
     </main>
 </body>
 </html>
