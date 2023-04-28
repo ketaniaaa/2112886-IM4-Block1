@@ -1,30 +1,513 @@
+/*importing the local font files and google font files in one file so that I dont have to add this to the head of each page*/
+
 @font-face {
     font-family: 'momcakethin';
-    src: url('https: //github.com/ketaniaaa/2112886-IM4-Block1/blob/main/fonts/momcakethin-9y6az-webfont.woff2') format('woff2'),
-        url('https: //github.com/ketaniaaa/2112886-IM4-Block1/blob/main/fonts/momcakethin-9y6az-webfont.woff') format('woff');
+    src: url('/fonts/MomcakeThin-9Y6aZ.otf');
     font-weight: normal;
     font-style: normal;
 
 }
 
-h1{
-    color: red;
+@font-face {
+    font-family: 'momcake';
+    src: url('/fonts/MomcakeBold-WyonA.otf');
+    font-weight: normal;
+    font-style: normal;
+
 }
+
+@font-face {
+    font-family: 'notera';
+    src: url('/fonts/NoteraPersonalUseOnly-wxJ9.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');/*font-family: 'Cardo',
+serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
+
+
+
+/*header styling */
+header {
+    display: inline-flex;
+    position: absolute;
+   left: 0;
+   right: 0;
+   width: 100%;
+   border-bottom: solid black 2px;
+   margin-left: none;
+   margin-right: none;
+   padding-right: none;
+   padding-left: none;
+   z-index: 4;
+}
+#menuButton{
+    font-size: 38px;
+    
+    margin: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    transform: translateY(-39px);
+    border-right: solid black 2px;
+}
+#logoA{
+    padding-left: 40px;
+
+    height: 45px;
+    position: relative;
+    left: 38%;
+    right: 50%;
+
+    transform: translateY(-5px);
+    
+}
+#logoImg{
+    height: 80%;
+}
+/*Menu Styling*/
 #sideMenu{
 height: 100%;
     width: 0;
+    display: inline-flex;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     top: 0;
-    left: 0;
-    background-color: #111;
+    right: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
     transition: 0.5s;
     padding-top: 60px;
     text-align: center;
+    background-color: #2A2824;
+    list-style: none;
 }
-h1 {
-    font-family: 'momcakethin', serif;
-    font-weight: normal;
-    font-style: normal;
+#navCont{
+ 
+    padding-left: 5%;
+    transform: translateY(-60px);
+    width: 100%;
+    font-family: 'momcake';
+    text-decoration: none;
+    color: white;
+  
+}
+#closeMenu{
+    color: white;
+    padding-left: 55px;
+    padding-top: 15px;
+    padding-right: 50px;
+    left: 53%;
+    top: 0;
+    font-family: 'momcake';
+    font-size: 38px;
+    border-right: 1px solid white;
+  height: 100%;
+  transform: translateY(-105px);
+}
+#ulNav{
+    list-style: none;
+    text-align: left;
+    line-height: 60px;
+}
+#ulExlink{
+    list-style: none;
+    display: inline-flex;
+}
+#liNav{
+border-bottom: dotted white 1px;
+}
+#aEx{
+    color: #F24822;
+    text-decoration: none;
+    font-family: "momcakethin";
+    padding: 5px;
+}
+#aNav{
+    color: white;
+        text-decoration: none;
+        font-family: "momcakethin";
+        font-size: 34px;
+
+}
+footer{
+    margin: 0;
+    border-top: solid white 1px;
+    transform: translateX(-30px);
+    color: #F24822;
+    position: relative;
+    bottom: 0;
+    margin-top: 70%;
+}
+/*Home page/////////////////////////////*/
+#homeCard{
+    display: inline-flex;
+    z-index: -1;
+}
+#theoryCard{
+    display: inline-flex;
+        z-index: -1;
+        margin-top: 100%;
+}
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    z-index: inherit;
+
+}
+#leftSideHome{
+    
+left: 0;
+background-color: #8f1917;
+
+
+}
+#rightSideHome{
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    
+    z-index: inherit;
+    background: url(assets/white-plaster-texture\ 2.png);
+
+    
+    
+}
+#homeQuote{
+    color: #060606;
+    font-size: 32px;
+   
+font-family: 'notera',serif;
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 3%;
+  
+
+}
+#cigImg{
+    height: 50%;
+    padding: 15%;
+    border-top-left-radius: 50%;
+}
+#camusImg{
+    padding: 5%;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+#homeButton{
+    position: absolute;
+        top: 83%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Halant';
+        text-decoration: none;
+        color: black;
+        font-size: 32px;
+        font-style: italic;
+        font-weight: 200;
+        border: solid black 2px;
+        border-radius: 50px;
+        padding: 15px;
+        transform: rotate(15deg);
+}
+#homeButton2 {
+    position: absolute;
+    top: 78%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    font-family: 'Halant';
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 400;
+    border: solid rgb(255, 255, 255) 4px;
+    border-radius: 50px;
+    padding: 15px;
+    transform: rotate(-15deg);
+}
+/*////////////////////////////THEORY///////////////////////////////////////////////////////////////////////////////////*/
+
+#leftSideTry{
+    background: url(assets/white-plaster-texture\ 2.png);
+    left: 0;
+    display: flex;
+  padding-top: 5%;
+  flex-direction: column;
+  
+z-index: 1;
+  
+    
+}
+#tdlist{
+list-style: upper-roman;
+z-index: inherit;
+}
+#tdLi{
+    list-style-type: upper-roman;
+z-index: inherit;
+line-height: 280%;
+}
+#tdA{
+font-family: 'Cardo';
+    text-decoration: none;
+    color: black;
+    z-index: inherit;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-transform: lowercase;
+}
+#rightSideTry{
+background-color: #3F3E3E;
+right: 0;
+z-index: 2;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+#tdTitle{
+    font-family: 'momcake';
+    font-size: 100px;
+    letter-spacing: 20px;
+    margin-bottom: 0;
+    padding-left: 5%;
+}
+#tdArticleHeading{
+    font-family: 'momcake';
+    color: #B01E1C;
+    font-size: 40px;
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 5%;
+    margin: 0;
+    padding-bottom: 5%;
+    text-shadow: -1px -1px 0 #F24822 1px -1px 0 #F24822, -1px 1px 0 #F24822, 1px 1px 0 #F24822;
+}
+#tdDescription{
+    font-family: 'Halant';
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+}
+#readMore{
+    text-decoration: none;
+font-family: 'Halant';
+    color: white;
+   font-weight: 200;
+   padding: 8px;
+   border: solid white 1px;
+   border-radius: 45px;
+   align-self: flex-start;
+   margin-left: 10% ;
+
+}
+
+/*/////////////////////////////////DESIGN HOME //////////////////////////////////////////////*/
+#readMoreB {
+    text-decoration: none;
+    font-family: 'Halant';
+    color: black;
+    font-weight: 200;
+    padding: 8px;
+    border: solid black 1px;
+    border-radius: 45px;
+    align-self: flex-start;
+    margin-left: 10%;
+
+}
+#leftSideDes {
+    background-color: #B01E1C;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#rightSideDes {
+    background: url(assets/white-plaster-texture\ 2.png);
+    right: 0;
+    display: flex;
+    padding-top: 5%;
+    flex-direction: column;
+
+    z-index: 1;}
+
+        #tdArticleHeading1 {
+            font-family: 'momcake';
+            color: #000000;
+            font-size: 40px;
+            padding-top: 3%;
+            padding-left: 10%;
+            padding-right: 5%;
+            margin: 0;
+            padding-bottom: 5%;
+            text-shadow: -1px -1px 0 #F24822 1px -1px 0 #F24822, -1px 1px 0 #F24822, 1px 1px 0 #F24822;
+        }
+
+#tdlist1 {
+    list-style: upper-roman;
+    z-index: inherit;
+}
+
+#tdLi1 {
+    list-style-type: upper-roman;
+    z-index: inherit;
+    line-height: 220%;
+    text-align: left;
+}
+
+#tdA1 {
+    font-family: 'Cardo';
+    text-decoration: none;
+    color: black;
+    z-index: inherit;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+}
+#tdTitle1 {
+    font-family: 'momcake';
+    font-size: 100px;
+    letter-spacing: 20px;
+    margin-bottom: 0;
+    padding-left: 5%;
+}
+/*/////////////////////////////////////////////////////////BLOG TEMPLATE///////////////////////////////////////////*/
+#blogImg{
+    width: 100%;
+    height: 10%;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    object-fit: cover;
+    padding: 0%;
+    margin: auto;
+}
+.blogPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        justify-content: center;
+        align-content: center;
+        justify-content: center;
+       
+}
+#blogTitle{
+ font-family: 'momcakethin';
+ font-size: 128px;
+ display: flex;
+ color: white;
+ background-color: #3F3E3E;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    margin-top: 0%;
+    margin-top: 0;
+    padding-top: 0%;
+    padding-bottom: 0%;
+  
+    transform: translateY(-70px);
+}
+
+#blogDes{
+    font-size: 45px;
+    font-family: 'Halant';
+        width: 90%;
+        padding-top: 5%;
+        margin: 0%;
+        color: #8f1917;
+        
+}
+#btNav1{
+    position: absolute;
+    left: 10%;
+    text-decoration: none;
+    color: black;
+    font-family: 'Halant';
+    font-weight: 300;
+    font-style: italic;
+    border-radius: 50px;
+    padding: 1%;
+    border: 2px solid black;
+    margin-top: 5px;
+}
+#btNav2 {
+    position: absolute;
+   right: 10%;
+    text-decoration: none;
+        color: black;
+        font-family: 'Halant';
+        font-weight: 300;
+        font-style: italic;
+        border-radius: 50px;
+        padding: 1%;
+        border: 2px solid black;
+        margin-top: 5px;
+}
+#btNav3 {
+position: absolute;
+   left: 45%;
+    text-decoration: none;
+    color: black;
+    font-family: 'Halant';
+    font-weight: 300;
+    font-style: italic;
+    border-radius: 50px;
+    padding: 1%;
+    border: 2px solid black;
+    margin-top: 5px;
+}
+#blogTime{
+
+        width: 90%;
+      padding-bottom: 5%;
+      padding-top: 2%;
+        margin: 0%;
+      
+        font-family: 'Halant';
+        font-size: 20px;
+        color: #767676;
+}
+#mainBlog{
+    width: 80%;
+    font-family: 'Halant';
+    font-size: 20px;
+    column-count: 2;
+    
+}
+#references{
+
+    background-color: #8f1917;
+   padding: 20px;
+   margin-top: 10px;
+   border-radius: 20px;
+   color: white;
+
+}
+#refsTitle{
+    font-style: italic;
+
+
+}
+#refList{
+    list-style: lower-roman;
 }

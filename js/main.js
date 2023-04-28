@@ -1,36 +1,60 @@
+//dynamically created a header which contains a button that expands the menu and the logo with the site name. This 
+const header = document.createElement('header');
+header.id = 'mainMenu';
+
+const menuButton = document.createElement('p');
+menuButton.id = "menuButton";
+menuButton.innerHTML = "&plus;";
+menuButton.addEventListener("click", sideBar);
+header.appendChild(menuButton);
+
+const logoLink = document.createElement('a');
+logoLink.id = "logoA"
+logoLink.href = '../index.html'
+header.appendChild(logoLink);
+
+const logoImg = document.createElement('img');
+logoImg.src = "../assets/highresLogo.png";
+logoImg.alt = "logo for the Myth with says The Myth and has a slanted line and circle to represent the boulder up a mountain"
+logoImg.id = "logoImg";
+logoLink.appendChild(logoImg);
+
+
+
 const menu = document.createElement('div');
 menu.id = 'sideMenu'
 //basic container that will hold all the links
 
 //close side menu
-const closeButton = document.createElement('a');
-closeButton.href = "";
+const closeButton = document.createElement('p');
+
 closeButton.id = 'closeMenu';
 closeButton.className = "begone";
-closeButton.innerText = 'x';
+closeButton.innerHTML = '&times;';
 menu.append(closeButton);
 
-
-//link with the sites logo for easy navigation back home across the site EDIT: redesigned site therefore this in the navigation is redundant 
-/*const titleLink = document.createElement('a');
-titleLink.href = '../index.html';
-titleLink.innerText = 'title';
-titleLink.id = 'titleLink';
-menu.appendChild(titleLink);*/
-
+const navContainer = document.createElement('div');
+navContainer.id = "navCont";
+menu.appendChild(navContainer);
 //navigation to main sections 
+const contents = document.createElement('h1');
+contents.id = 'contentTitle';
+contents.innerText = 'Contents';
+navContainer.appendChild(contents);
+
 
 const navBar = document.createElement('nav');
 navBar.id = 'navigation';
-menu.appendChild(navBar);
+navContainer.appendChild(navBar);
 
 //dynamically created list to easily add more links or pages
  const navList = document.createElement('ul');
  navList.id ='ulNav';
  const navItems =[
-    {title: 'theory', link: '../pages/theory.html'},
-    {title: 'design', link: '../pages/design.html'},
-    {title: 'artwork', link: '../pages/art.html'}
+   {title: 'i. home', link: '../index.html'},
+    {title: 'ii. theory', link: '../pages/theory.html'},
+    {title: 'iii. design', link: '../pages/design.html'},
+    {title: 'iv. artwork', link: '../pages/art.html'}
 
  ];
 
@@ -47,9 +71,14 @@ menu.appendChild(navBar);
  }
  navBar.appendChild(navList);
 
+//const blogSub = document.createElement('ol');
+//blogSub.id = "blogSubMenu";
+
+
+
 const footer = document.createElement('footer');
 footer.id ="footsy";
-menu.appendChild(footer);
+navContainer.appendChild(footer);
 
 const authorCredit = document.createElement('p');
 authorCredit.id = 'endCredit';
@@ -59,10 +88,10 @@ footer.appendChild(authorCredit);
 const exLinks = document.createElement('ul');
 exLinks.id = 'ulExlink';
 const exItems = [
-   {title: 'Github', link: 'https://github.com/ketaniaaa/2112886-IM4-Block1', target: 'blank'},
-   {title: 'Figma', link: 'https://github.com/ketaniaaa/2112886-IM4-Block1', target: 'blank'},
-   {title: 'Resources', link: 'https://github.com/ketaniaaa/2112886-IM4-Block1', target: 'blank'},
-   {title: 'LinkedIn', link: 'https://github.com/ketaniaaa/2112886-IM4-Block1', target: 'blank'}
+   {title: 'Github', link: 'https://github.com/ketaniaaa/2112886-IM4-Block1', target: '_blank'},
+   {title: 'Figma', link: 'https://github.com/ketaniaaa/2112886-IM4-Block1', target: '_blank'},
+   {title: 'Resources', link: 'https://github.com/ketaniaaa/2112886-IM4-Block1', target: '_blank'},
+   {title: 'LinkedIn', link: 'https://github.com/ketaniaaa/2112886-IM4-Block1', target: '_blank'}
 ];
 for (let item of exItems){
    const exLi = document.createElement('li');
@@ -72,7 +101,7 @@ for (let item of exItems){
    exA.id ='aEx';
    exA.innerText = item.title;
    exA.href = item.link;
-   exA.EventTarget = item.target;
+   exA.setAttribute("target", "_blank");
    exLi.appendChild(exA);
    exLinks.appendChild(exLi);
 }
@@ -82,19 +111,71 @@ footer.appendChild(exLinks);
 
  const headHead = document.getElementById("mainPage");
  document.body.insertBefore(menu, headHead);
+ document.body.prepend(header);
 
 
  //open and closing the menu 
 
  function sideBar(){
    document.getElementById("sideMenu").style.width = "50%";
+   
+    //document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById('menuButton').innerHTML = '&times;'
  }
 
- document.getElementById("closeMenu").addEventListener(click, closeBar);
+ document.getElementById("closeMenu").addEventListener('click', closeBar);
 
  function closeBar(){
    document.getElementById("sideMenu").style.width = "0";
+    document.getElementById('menuButton').innerHTML = '&plus;'
  }
+
+
+////////////////////////////////////////////////Blog and Theory 
+
+/*
+const tdContainer = document.getElementsByClassName('tdCont');
+
+const tdList = document.createElement('ol');
+tdList.id ='tdList';
+
+const tdListItems = [
+   {title: 'blog one', link: '../pages/blogone.html'},
+   {title: 'blog two', link: ''},
+   {title: 'blog three', link: ''},
+   {title: 'blog four', link: ''},
+   {title: 'blog five', link: ''},
+];
+for(let item of tdListItems){
+   const tdLi = document.createElement('li');
+   tdLi.id = 'tdLi';
+
+   const tdA = document.createElement('a');
+   tdA.id = 'tdA';
+   tdA.href = item.link;
+   tdA.innerText = item.title;
+   tdLi.appendChild(tdA);
+   tdList.appendChild(tdLi);
+}
+
+*/
+
+
+
+
+
+
+/* document.addEventListener('click', function handleClickOutsideBox(event) {
+  const box = document.getElementById('box');
+
+  if (!box.contains(event.target)) {
+    box.style.display = 'none';
+  }
+});
+ */
+
+
+
 
 //creating actual header but this is NOT workingngngngngnngng
 /* 

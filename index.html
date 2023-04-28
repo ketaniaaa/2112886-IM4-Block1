@@ -26,17 +26,36 @@
     <!--External Files and Assets-->
     <script src="https://kit.fontawesome.com/07bc5db923.js" crossorigin="anonymous"></script>
     <!--tab stuff -->
-    <title>Home</title>
+    <title>The Myth, A Sisyphus Experience</title>
+    <link rel="icon" href="assets/highresIcon.png" type="image/x-icon" class="u-photo">
 </head>
-<body>
+<body id="homeBody">
     <main id="mainPage" class="h-feed homePage">
-        <header>
-           <span onclick="sideBar()" class="btn btn-primary badge" id="menuButton"><i class="fa-solid fa-bars"></i></span>
-           <a href="index.html" id="mainTitle" class="u-url p-name">The Myth</a>
-           <span class="btn btn-primary badge" id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <!---
+      
+      <header>
+           
+           <ul class="h-card" id="header"> 
+            <li class="u-photo icon" id="headerID"><span onclick="sideBar()" class="btn btn-primary badge" id="menuButton">&plus;</span></li>  
+          
+        <li class="u-photo icon" id="headerID"><span class="btn btn-primary badge" id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></span></ul></li>
+           <p id="titleCont"><a href="index.html" id="mainTitle" class="u-url p-name">The / Myth</a></p>
         </header>
+    -->
    <section class="h-card" id="homeCard">
-<h1>Hello testing</h1>
+<section class="h-card split" id="leftSideHome">
+    
+    <img src="assets/cigarette-16383 1.png" alt="a picture of a burning cigarette with smoke being emitted" id="cigImg" class="u-photo">
+    <h2 id="homeQuote" class="p-quote">&quot; What is called a reason for living is also an excellent reason for dying.&quot;</h2>
+
+</section>
+<section class="h-card split" id="rightSideHome">
+    <img src="assets/blahhhh.png" alt="collage of Albert Camus smoking a cigarette with a mousache drawn on to mimic dada artwork and the words sisyphus next to Camus' face" id="camusImg"
+        class="u-photo">
+    <a href="pages/art.html" class="u-url" id="homeButton"> start experience</a>
+    <a href="pages/art.html" class="u-url" id="homeButton2"> start experience</a>
+
+</section>
    </section>
     
     </main>
