@@ -9,15 +9,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Local Files-->
     <script src="../js/main.js" defer></script>
+    <script src="../js/art.js"> defer</script>
     <link rel="stylesheet" href="../main.css">
     <!--External Files and Assets-->
+    <script src="https://kit.fontawesome.com/07bc5db923.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-core@2.4.0/dist/tf-core.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-converter@2.4.0/dist/tf-converter.js"></script>
+    <script src="https://unpkg.com/@tensorflow-models/face-landmarks-detection@0.0.3/dist/face-landmarks-detection.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.4.0/dist/tf-backend-webgl.js"></script>
     <title>art</title>
 </head>
 
 <body>
-    <main id="mainPage">
-        <h1>Art</h1>
+    <main id="mainPage" class="e-entry">
+        <h1 class="p-name" id="artTitle">The Myth: Sisyphus </h1>
+       <button class="u-button" id="start" onclick="beginArtwork()"> START EXPERIENCE</button>
+      <section id="noteArt">
+        <p>The aim of this artwork is to try and get the boulder up the mountain. In order to achieve this, you must NOT blink or Sisyphus will 
+            return to the bottom of the mountain. This artwork also uses blink detection so you will have to allow this site to access your webcam.
+
+        </p>
+        <h2 id="status"> </h2>
+      </section>
+        <video class="u-video" id="videoSis">
+            <source src="../assets/Untitled_Artwork.MP4" type="video/mp4"/>
+
+        </video>
+        <section class="h-card" id="artCard">
+            <button class="u-button" onclick="restartArt()"> END</button>
+            <article class="h-card" id="artLink">
+<h2 class="p-name"> Rationale and Description</h2>
+<span class="u-url">
+<p class="e-content">read more about the meaning behind this piece of internet art </p>
+<a href="" class="u-url" id="artRedi"><i class="fa-solid fa-arrow-right"></i></a></a>
+</span>
+            </article>
+        </section>
     </main>
+    <section class="canvas-wrapper">
+        <canvas id="camOutput"></canvas>
+        <video id="video" playsinline style="
+              -webkit-transform: scaleX(-1);
+              transform: scaleX(-1);
+              visibility: hidden;
+              width: auto;
+              height: auto;
+              ">
+        </video>
+    </section>
 </body>
 
 </html>

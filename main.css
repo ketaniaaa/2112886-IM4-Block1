@@ -28,6 +28,13 @@ serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
 
 
+/*hover*/
+a:hover {
+    opacity: 100%;
+    color: #8f1917;
+    text-shadow: #8f1917;
+    text-decoration: solid;
+}
 
 /*header styling */
 header {
@@ -43,6 +50,12 @@ header {
    padding-left: none;
    z-index: 4;
 }
+a:hover{
+opacity: 90%;
+color: #8f1917;
+text-shadow: #8f1917;
+text-decoration: solid;
+}
 #menuButton{
     font-size: 38px;
     
@@ -55,6 +68,11 @@ header {
     padding-bottom: 5px;
     transform: translateY(-39px);
     border-right: solid black 2px;
+}
+#menuButton :hover{
+   
+cursor: pointer;
+
 }
 #logoA{
     padding-left: 40px;
@@ -110,6 +128,10 @@ height: 100%;
   height: 100%;
   transform: translateY(-105px);
 }
+#closeMenu:hover{
+    cursor: pointer;
+    color: #F24822;
+}
 #ulNav{
     list-style: none;
     text-align: left;
@@ -135,6 +157,9 @@ border-bottom: dotted white 1px;
         font-size: 34px;
 
 }
+#aNav:hover{
+    color: #F24822;
+}
 footer{
     margin: 0;
     border-top: solid white 1px;
@@ -143,6 +168,9 @@ footer{
     position: relative;
     bottom: 0;
     margin-top: 70%;
+}
+#exA :hover{
+    color: white;
 }
 /*Home page/////////////////////////////*/
 #homeCard{
@@ -208,6 +236,9 @@ font-family: 'notera',serif;
         left: 50%;
         transform: translate(-50%, -50%);
 }
+#camusImg :hover{
+    cursor: help;
+}
 #homeButton{
     position: absolute;
         top: 83%;
@@ -223,6 +254,9 @@ font-family: 'notera',serif;
         border-radius: 50px;
         padding: 15px;
         transform: rotate(15deg);
+}
+#homeButton a:hover{
+    background-color: #2a282460;
 }
 #homeButton2 {
     position: absolute;
@@ -240,6 +274,7 @@ font-family: 'notera',serif;
     padding: 15px;
     transform: rotate(-15deg);
 }
+
 /*////////////////////////////THEORY///////////////////////////////////////////////////////////////////////////////////*/
 
 #leftSideTry{
@@ -270,6 +305,11 @@ font-family: 'Cardo';
     font-size: 20px;
     letter-spacing: 5px;
     text-transform: lowercase;
+}
+#tdA:hover{
+    color: #8f1917;
+    transition: 0.2s;
+    text-shadow: yellow;
 }
 #rightSideTry{
 background-color: #3F3E3E;
@@ -317,6 +357,18 @@ font-family: 'Halant';
    margin-left: 10% ;
 
 }
+#readMore:hover {
+    transition: 0.2s;
+    text-decoration: none;
+    font-family: 'Halant';
+    color: #B01E1C;
+    font-weight: 200;
+    padding: 8px;
+    border: solid #B01E1C 1px;
+    border-radius: 45px;
+    align-self: flex-start;
+    margin-left: 10%;
+}
 
 /*/////////////////////////////////DESIGN HOME //////////////////////////////////////////////*/
 #readMoreB {
@@ -330,6 +382,18 @@ font-family: 'Halant';
     align-self: flex-start;
     margin-left: 10%;
 
+}
+#readMoreB:hover{
+    transition: 0.2s;
+    text-decoration: none;
+        font-family: 'Halant';
+        color: white;
+        font-weight: 200;
+        padding: 8px;
+        border: solid white 1px;
+        border-radius: 45px;
+        align-self: flex-start;
+        margin-left: 10%;
 }
 #leftSideDes {
     background-color: #B01E1C;
@@ -382,6 +446,11 @@ font-family: 'Halant';
     font-size: 20px;
     letter-spacing: 3px;
     text-transform: lowercase;
+}
+#tdA1:hover {
+    color: #8f1917;
+    transition: 0.2s;
+    text-shadow: yellow;
 }
 #tdTitle1 {
     font-family: 'momcake';
@@ -510,4 +579,13 @@ position: absolute;
 }
 #refList{
     list-style: lower-roman;
+}
+/*artwork*/
+video{
+   max-width: 100%;
+
+}
+
+#wireframes{
+    max-width: 90%;
 }
